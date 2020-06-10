@@ -24,6 +24,7 @@ body {
     border-bottom: solid 3px rgb(61, 60, 60);
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #query {
@@ -44,6 +45,21 @@ body {
     background-color: rgba(236, 236, 238, 0.514);
     margin: 0;
     padding: 25px;
+}
+
+#img {
+    width: 50%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 10px;
+    margin: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .topic-name {
@@ -88,7 +104,17 @@ body {
 .footer {
     grid-area: ft;
     align-self: auto;
+    border-top: solid 3px rgb(61, 60, 60);
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "hd hd hd hd hd hd"
+            "main main main main sd sd"
+            "ft ft ft ft ft ft";
+    }
 }
