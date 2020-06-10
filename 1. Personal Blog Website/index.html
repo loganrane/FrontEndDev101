@@ -25,14 +25,14 @@
                 </form>
             </div>
             <div class="content">
-                <h1>
-                    <a href="blog-post-1.html"
-                        >BLOG POST 1 - BASICS OF HTML AND CSS</a
-                    >
+                <h1 class="topic-name">
+                    BLOG POST 1 - BASICS OF HTML AND CSS
                 </h1>
-                <h2>
-                    Learn the basics of HTML and CSS, create your own website
-                    and be on the lead.
+                <h2 class="desc">
+                    <em
+                        >Learn the basics of HTML and CSS, create your own
+                        website and be on the lead.</em
+                    >
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -42,11 +42,15 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <p>Read the full article.</p>
-                <h1>BLOG POST 2 - HOW TO DESIGN A WEBSITE</h1>
-                <h2>
-                    Learn how to design a responsive website in few easy steps.
-                    All you need is dedication.
+                <p><a href="blog-post-1.html">Read the full article.</a></p>
+                <h1 class="topic-name">
+                    BLOG POST 2 - HOW TO DESIGN A WEBSITE
+                </h1>
+                <h2 class="desc">
+                    <em
+                        >Learn how to design a responsive website in few easy
+                        steps. All you need is dedication.</em
+                    >
                 </h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -56,30 +60,36 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur.
                 </p>
-                <p>Read the full article.</p>
+                <p><a href="blog-post-2.html">Read the full article.</a></p>
             </div>
             <div class="sidebar">
                 <h2>About me</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Tortor pretium viverra suspendisse potenti nullam ac
-                    tortor vitae. Vel turpis nunc eget lorem dolor sed viverra.
-                    Dignissim cras tincidunt lobortis feugiat vivamus at. Etiam
-                    non quam lacus suspendisse faucibus interdum. Rutrum quisque
-                    non tellus orci ac auctor augue mauris.
+                    do eiusmod
+                    <strong
+                        >cras tincidunt lobortis feugiat vivamus at. Etiam non
+                        quam lacus</strong
+                    >tempor incididunt ut labore et dolore magna aliqua. Tortor
+                    pretium viverra suspendisse potenti nullam ac tortor vitae.
+                    Vel turpis nunc eget lorem dolor sed viverra. Dignissim cras
+                    tincidunt lobortis feugiat vivamus at. Etiam non quam lacus
+                    suspendisse faucibus interdum. Rutrum quisque non tellus
+                    orci ac auctor augue mauris.
                 </p>
-                <h2>Explore:</h2>
-                <ul>
-                    <li>Google</li>
-                    <li>Wikipedia</li>
-                    <li>Udacity</li>
-                </ul>
+                <div class="explore">
+                    <h2 id="explore-header">Explore:</h2>
+                    <a href="https:\\www.google.com" target="_blank">Google</a>
+                    <a href="https:\\www.facebook.com" target="_blank"
+                        >Facebook</a
+                    >
+                    <a href="https:\\www.instagram.com" target="_blank"
+                        >Instagram</a
+                    >
+                </div>
             </div>
             <div class="footer">
                 <form>
-                    <button>Facebook</button>
-                    <button>Instagram</button>
                     <label for="fname">Name: </label>
                     <input
                         type="text"
@@ -94,7 +104,11 @@
                         id="femail"
                         placeholder="Enter your email address here"
                     />
-                    <input type="button" value="Done" placeholder="Subscribe" />
+                    <input
+                        type="button"
+                        value="Subscibe"
+                        placeholder="Subscribe"
+                    />
                 </form>
             </div>
         </div>

@@ -34,7 +34,6 @@ body {
     width: 120px;
     height: 20px;
     background-image: url(https://cdn.freebiesupply.com/logos/large/2x/udacity-2-logo-svg-vector.svg);
-    /* background-image: url(C:/Users/lenovo/Desktop/alpha.jpg); */
     background-size: cover;
     cursor: pointer;
 }
@@ -42,14 +41,54 @@ body {
 /* Content */
 .content {
     grid-area: main;
+    background-color: rgba(236, 236, 238, 0.514);
+    margin: 0;
+    padding: 25px;
+}
+
+.topic-name {
+    color: rgb(48, 47, 47);
+}
+
+.desc {
+    color: rgb(168, 165, 165);
+    border-left: 2px solid rgb(36, 114, 218);
+    padding: 8px;
 }
 
 /* Side bar */
 .sidebar {
     grid-area: sd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(184, 179, 179, 0.212);
+}
+
+.explore {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20%;
+    grid-column-gap: 10%;
+    grid-template-areas:
+        "main main main"
+        "link1 link2 link3";
+}
+
+#explore-header {
+    grid-area: main;
 }
 
 /* Footer */
 .footer {
     grid-area: ft;
+    align-self: auto;
+}
+
+@media (min-width: 900px) {
 }
