@@ -1,0 +1,55 @@
+body {
+    background-color: rgba(223, 219, 219, 0.514);
+    font-family: "Raleway", sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "hd"
+        "main"
+        "sd"
+        "ft";
+    /* grid-template-columns: 100%; */
+    /* grid-template-rows: 5% 70% 20% 5%; */
+}
+
+/* Header */
+.header {
+    display: flex;
+    grid-area: hd;
+    background-color: rgba(157, 158, 160, 0.514);
+    margin: 0;
+    padding: 10px;
+    border-bottom: solid 3px rgb(61, 60, 60);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#query {
+    align-items: center;
+}
+
+#logo {
+    width: 120px;
+    height: 20px;
+    background-image: url(https://cdn.freebiesupply.com/logos/large/2x/udacity-2-logo-svg-vector.svg);
+    /* background-image: url(C:/Users/lenovo/Desktop/alpha.jpg); */
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* Content */
+.content {
+    grid-area: main;
+}
+
+/* Side bar */
+.sidebar {
+    grid-area: sd;
+}
+
+/* Footer */
+.footer {
+    grid-area: ft;
+}
