@@ -117,4 +117,8 @@ body {
             "main main main main sd sd"
             "ft ft ft ft ft ft";
     }
+
+    .sidebar {
+        margin: 45px 0 800px 0;
+    }
 }

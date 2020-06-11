@@ -1,0 +1,44 @@
+body {
+    background-color: rgba(223, 219, 219, 0.514);
+    font-family: "Raleway", sans-serif;
+}
+
+/* Main container */
+.container-blog {
+    display: grid;
+    grid-template-areas:
+        "hd"
+        "main";
+    /* grid-template-columns: 100%; */
+    /* grid-template-rows: 5% 70% 20% 5%; */
+}
+
+/* About the author card */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#avatar {
+    width: 30%;
+}
+
+#about {
+    padding: 0 80px;
+}
+
+@media (min-width: 900px) {
+    .container-blog {
+        display: grid;
+        grid-template-areas:
+            "hd hd hd hd hd hd"
+            "main main main main sd sd";
+    }
+
+    .info {
+        margin: 30px;
+        padding: 100px 0;
+    }
+}
