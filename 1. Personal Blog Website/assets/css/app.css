@@ -1,6 +1,6 @@
 @import "blog-post-1.css";
 @import "blog-post-2.css";
-/* @import "delta.css"; */
+@import "delta.css";
 
 body {
     background-color: rgba(223, 219, 219, 0.514);
