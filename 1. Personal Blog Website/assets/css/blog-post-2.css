@@ -1,0 +1,6 @@
+@import "app.css";
+@import "blog-post-1.css";
+
+h1 {
+    color: gray;
+}

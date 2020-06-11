@@ -40,5 +40,11 @@ body {
     .info {
         margin: 30px;
         padding: 100px 0;
+        margin: 100px 0 300px 0;
+    }
+
+    .info:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
     }
 }
