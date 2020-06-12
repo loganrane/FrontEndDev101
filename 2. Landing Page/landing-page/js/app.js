@@ -31,7 +31,19 @@
  */
 
 // build the nav
+let headings = document.getElementsByTagName("section");
+let navbarList = document.querySelector("#navbar__list");
+for (let temp of headings) {
+    let list = document.createElement("li");
+    list.setAttribute("class", "menu__link");
+    let anchorTag = document.createElement("a");
+    anchorTag.textContent = temp.dataset.nav;
+    anchorTag.setAttribute("href", "#" + temp.id);
+    list.appendChild(anchorTag);
+    // let appendToNavbar;
 
+    navbarList.insertAdjacentElement("beforeend", list);
+}
 // Add class 'active' to section when near top of viewport
 
 // Scroll to anchor ID using scrollTO event
