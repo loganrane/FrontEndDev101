@@ -2,10 +2,10 @@
 projectData = {};
 
 // Require Express to run server and routes
-let express = require("express");
+const express = require("express");
 
 // Start up an instance of app
-let app = express();
+const app = express();
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Cors for cross origin allowance
-let cors = require("cors");
+const cors = require("cors");
 app.use(cors());
 
 // Initialize the main project folder
@@ -38,13 +38,13 @@ function sendData(req, res) {
 
 // POST Route
 app.post("/add", callBack);
-
 function callBack(req, res) {
     newEntry = {
         date: req.body.date,
-        temp: req.body.temp,
         feeling: req.body.feelings,
+        temp: req.body.temp,
     };
     projectData.push(newEntry);
+    res.send(projectData);
     console.log(projectData);
 }
