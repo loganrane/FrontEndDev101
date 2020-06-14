@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.static("website"));
 
 // Setup Server
-const port = 8000;
+const port = 5500;
 
 const server = app.listen(port, function () {
     console.log("Server is running.");
@@ -33,12 +33,18 @@ app.get("/all", sendData);
 
 function sendData(req, res) {
     res.send(projectData);
+    console.log(projectData);
 }
 
 // POST Route
-const data = [];
 app.post("/add", callBack);
 
 function callBack(req, res) {
-    data.push(req.body);
+    newEntry = {
+        date: req.body.date,
+        temp: req.body.temp,
+        feeling: req.body.feelings,
+    };
+    projectData.push(newEntry);
+    console.log(projectData);
 }
