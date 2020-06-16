@@ -5,13 +5,24 @@ var path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
 var aylien = require("aylien_textapi");
+const bodyParser = require('body-parser')
+const cors = require('cors')
+
+
 // Set API credentials
 var textapi = new aylien({
-    application_id: process.env.API_ID,
-    application_key: process.env.API_KEY,
+    application_id: "1d1b6dc7",
+    application_key: "46c1aa6ed8deb52923dc1e246c29b374",
 });
 
-const app = express();
+const app = express()
+app.use(cors())
+// to use json
+app.use(bodyParser.json())
+// to use url encoded values
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 
 app.use(express.static("dist"));
 
@@ -27,6 +38,19 @@ app.listen(8081, function () {
     console.log("Example app listening on port 8081!");
 });
 
+
 app.get("/test", function (req, res) {
-    res.send(mockAPIResponse);
+    textapi.sentiment({
+        text: 'John is a very good football player!',
+        mode: 'tweet'
+      }, function(error, response) {
+        if (error === null) {
+          console.log(response);
+          res.send(response);
+        }
+        else{
+            console.log("error", error);
+        }
+      });
+
 });
