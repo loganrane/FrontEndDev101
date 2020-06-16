@@ -41,7 +41,7 @@ app.listen(8081, function () {
 
 app.get("/test", function (req, res) {
     textapi.sentiment({
-        text: 'John is a very good football player!',
+        text: data[data.length - 1].text,
         mode: 'tweet'
       }, function(error, response) {
         if (error === null) {
