@@ -54,3 +54,12 @@ app.get("/test", function (req, res) {
       });
 
 });
+
+const data = [];
+
+app.post('/add', addData);
+
+function addData (req,res){
+    data.push(req.body);
+    console.log(data);
+};

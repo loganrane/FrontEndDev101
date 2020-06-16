@@ -5,6 +5,28 @@ function handleSubmit(event) {
     let formText = document.getElementById("name").value;
     // Client.checkForName(formText);
 
+    // POST request using fetch() 
+    fetch("http://localhost:8081/add", { 
+        
+        // Adding method type 
+        method: "POST", 
+        
+        // Adding body or contents to send 
+        body: JSON.stringify({ 
+            text: formText,
+        }), 
+        
+        // Adding headers to the request 
+        headers: { 
+            "Content-type": "application/json; charset=UTF-8"
+        } 
+    }) 
+    
+    // Converting to JSON 
+    .then(response => response.json()) 
+    
+    // Displaying results to console 
+    .then(json => console.log(json)); 
     
 
     console.log("::: Form Submitted :::");
