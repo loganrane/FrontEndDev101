@@ -36,6 +36,8 @@ function handleSubmit(event) {
                 "results"
             ).innerHTML = `The tone of the message is: ${data.polarity}`;
         });
+
+    return "API called";
 }
 
 export { handleSubmit };

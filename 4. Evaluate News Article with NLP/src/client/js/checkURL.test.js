@@ -1,3 +1,5 @@
-it("Expecting it to fail", () => {
-    expect(1).toBe(1);
+const { validateURL } = require("./checkURL");
+
+it("URL validation", () => {
+    expect(validateURL("https:/www.google.com")).toBe(true);
 });
