@@ -42,8 +42,8 @@ app.listen(8081, function () {
 app.get("/test", function (req, res) {
     textapi.sentiment(
         {
-            text: data[data.length - 1].text,
-            mode: "tweet",
+            url: data[data.length - 1].text,
+            mode: "document",
         },
         function (error, response) {
             if (error === null) {
