@@ -9,5 +9,19 @@ Useful Resources to learn Front End Dev -
 
 To practice your Front-End Dev skills - [Challenges](https://www.frontendmentor.io/challenges)
 
-I highly recommend the above resource and also this repo is gonna contain the solutions of some of the challenges in there.
+I highly recommend the above resource.
+
+# Projects - 
+
+## 1. Personal Blog Website
+The project uses vanilla HTML and CSS to create an attractive portfolio website.
+
+## 2. Landing Page
+The project is made after learning JavaScript and DOM Manipulation. I integrated JS in the project to add scroll effects and animations. 
+
+## 3. Weather Journal App
+The project is made after learning Node JS and making call to APIs, I have integrated a simple post and get request to fetch the weather status of a place using [OpenWeatherMap API](https://openweathermap.org/guide) by it's zip code.
+
+## 4. Evaluate News Article with NLP
+The project is made after learning how to use build tool such as webpack. I used webpack in the project to bundle it and make it available to be used in the production. The project takes a URL and extracts the text from the content and do sentiment analysis using NLP Deep Learning Models which is used by making a call to API and fetching the details.
 
