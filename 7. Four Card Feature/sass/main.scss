@@ -35,6 +35,9 @@ body {
   box-sizing: border-box;
 }
 
+// ---------------------
+// HERO SECTION
+// ---------------------
 .hero {
   height: 25vh;
   margin: 4rem auto 3rem auto;
@@ -55,9 +58,30 @@ body {
 
   &__info {
     display: inline-block;
-    font-size: 2rem;
-    width: 40vw;
+    font-size: 1.5rem;
+    width: 25vw;
     font-weight: 200;
     color: $veryDarkBlue;
+  }
+}
+
+// ---------------------
+// CARDS
+// ---------------------
+.card {
+  display: inline-block;
+  margin: 1.75rem;
+  padding: 2rem;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+  &__heading {
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1.5rem;
   }
 }
