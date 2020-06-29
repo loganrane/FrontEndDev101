@@ -29,6 +29,10 @@ $default-font-family: 'Poppins', sans-serif;
 html {
   font-size: 62.5%; // 1rem = 10px
   font-family: 'Poppins', sans-serif;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -62,6 +66,14 @@ body {
     width: 25vw;
     font-weight: 200;
     color: $veryDarkBlue;
+
+    @media only screen and (max-width: 600px) {
+      width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 100%;
   }
 }
 
@@ -77,6 +89,14 @@ body {
     'sv sv km km cl cl'
     '. . km km . .';
   justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-areas:
+      'tb'
+      'cl'
+      'km'
+      'sv';
+  }
 }
 
 .card {
@@ -89,8 +109,15 @@ body {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   position: relative;
 
+  @media only screen and (max-width: 600px) {
+    height: 27rem;
+    width: 90%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
   &__heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: $veryDarkBlue;
   }
 
