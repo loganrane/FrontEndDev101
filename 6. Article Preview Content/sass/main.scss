@@ -18,14 +18,14 @@ html {
 body {
   font-size: 1.3rem;
   font-family: 'Manrope', sans-serif;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(252, 252, 252);
 }
 
 .container {
   width: 35vw;
   background-color: #fff;
   border-radius: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 30vh auto;
   overflow: hidden;
 
@@ -73,6 +73,7 @@ body {
 
   &__details {
     margin-left: 1.25rem;
+    margin-right: auto;
   }
 
   &__name {
@@ -82,5 +83,24 @@ body {
 
   &__date {
     color: $DesaturatedDarkBlue;
+  }
+}
+
+.btn {
+  &--share {
+    height: 33px;
+    width: 33px;
+    background-image: url(../../images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-color: #ecf2f8;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: #cfd8e0;
+    }
   }
 }
