@@ -9,6 +9,12 @@ html {
   font-size: 62.5%; // 1rem = 10px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 1.3rem;
   font-family: 'Manrope', sans-serif;
@@ -25,16 +31,11 @@ body {
 
   // Display properties
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-areas:
-    'img img head head head'
-    'img img text text text'
-    'img img info info info';
+  grid-template-columns: 30% 70%;
+
   grid-gap: 1rem;
 
   &__image {
-    grid-area: img;
-
     &--img {
       width: 100%;
       height: 100%;
@@ -50,6 +51,7 @@ body {
 
   &__text {
     grid-area: text;
+    color: $VeryDarkGrayishBlue;
   }
 
   &__info {
