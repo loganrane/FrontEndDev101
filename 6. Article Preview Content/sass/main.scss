@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: 40vw;
+  width: 35vw;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -31,9 +31,7 @@ body {
 
   // Display properties
   display: grid;
-  grid-template-columns: 30% 70%;
-
-  grid-gap: 1rem;
+  grid-template-columns: 35% 65%;
 
   &__image {
     &--img {
@@ -44,30 +42,45 @@ body {
   }
 
   &__article {
-    grid-area: head;
-    font-weight: 500;
-    color: $VeryDarkGrayishBlue;
-  }
+    padding: 3rem;
 
-  &__text {
-    grid-area: text;
-    color: $VeryDarkGrayishBlue;
+    // Display properties - Grid inside the grid.
+    display: grid;
+    grid-gap: 1.5rem;
+    // grid-template-rows: ;
   }
+}
 
-  &__info {
-    grid-area: info;
-    display: flex;
-  }
+.heading--2 {
+  color: $VeryDarkGrayishBlue;
+  font-weight: 500;
+}
 
-  &__profileicon {
-    height: 3em;
-    width: 3em;
+.text {
+  color: $DesaturatedDarkBlue;
+}
+
+.info {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
   }
 
+  &__details {
+    margin-left: 1.25rem;
+  }
+
   &__name {
+    color: $VeryDarkGrayishBlue;
+    font-weight: 700;
   }
 
   &__date {
+    color: $DesaturatedDarkBlue;
   }
 }
