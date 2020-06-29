@@ -1,4 +1,6 @@
-// Variables
+// ---------------------
+// VARIABLES
+// ---------------------
 
 // Primary
 $color-red: hsl(0, 78%, 62%);
@@ -14,3 +16,48 @@ $veryLightGray: hsl(0, 0%, 98%);
 // Fonts
 $default-font-size: 15px;
 $default-font-family: 'Poppins', sans-serif;
+
+// ---------------------
+// BASIC FOR THE WEBSITE
+// ---------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.hero {
+  height: 25vh;
+  margin: 4rem auto 3rem auto;
+  text-align: center;
+
+  &__heading {
+    font-size: 5.25rem;
+    color: $veryDarkBlue;
+
+    &--light {
+      font-weight: 200;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    display: inline-block;
+    font-size: 2rem;
+    width: 40vw;
+    font-weight: 200;
+    color: $veryDarkBlue;
+  }
+}
