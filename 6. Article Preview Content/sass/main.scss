@@ -33,6 +33,11 @@ body {
   display: grid;
   grid-template-columns: 35% 65%;
 
+  @media only screen and (max-width: 800px) {
+    grid-template-rows: 35% 65%;
+    grid-template-columns: 1fr;
+  }
+
   &__image {
     &--img {
       width: 100%;
