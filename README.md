@@ -6,10 +6,9 @@ Useful Resources to learn Front End Dev -
 - [Jonas Schmedtmann's courses](https://www.udemy.com/user/jonasschmedtmann/)
 - [CheatSheets](https://github.com/logeshpaul/Frontend-Cheat-Sheets)
 - [EloquentJS](https://eloquentjavascript.net/)
+- [Resources for building the page](http://codingheroes.io/resources/)
 
-To practice your Front-End Dev skills - [Challenges](https://www.frontendmentor.io/challenges)
-
-I highly recommend the above resource.
+To practice your Front-End Dev skills - [Do the Challenges here.](https://www.frontendmentor.io/challenges)
 
 # Projects - 
 
