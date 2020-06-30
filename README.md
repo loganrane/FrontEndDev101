@@ -24,3 +24,5 @@ The project is made after learning Node JS and making call to APIs, I have integ
 ## 4. Evaluate News Article with NLP
 The project is made after learning how to use build tool such as webpack. I used webpack in the project to bundle it and make it available to be used in the production. The project takes a URL and extracts the text from the content and do sentiment analysis using NLP Deep Learning Models which is used by making a call to API and fetching the details.
 
+## 5. Fylo Data Tracker App
+This project tells you about your daily data usage in beautiful and clean UI. **Note:** This website is not functional, it is just a UI prototype done to complete this [challenge](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n).
