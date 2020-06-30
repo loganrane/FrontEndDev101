@@ -9,7 +9,7 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, prevDice;
 
 init();
 
@@ -23,6 +23,15 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 		diceDOM.style.display = 'block';
 		diceDOM.src = './dice-' + dice + '.png';
 
+		// Challenge 1 - Player loses his entire score if he scores 2 sixes in a row
+		if (prevDice === 6 && dice === 6) {
+			roundScore = 0;
+			scores[activePlayer] = 0;
+			document.querySelector('#score-' + activePlayer).textContent =
+				scores[activePlayer];
+			nextPlayer();
+		}
+
 		// 3. Update the round score IF the rolled number was NOT a 1.
 		if (dice !== 1) {
 			// Add score to the round score
@@ -32,6 +41,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 			// Next Player and all scores are lost
 			nextPlayer();
 		}
+		prevDice = dice;
 	}
 });
 
@@ -82,6 +92,7 @@ function init() {
 	roundScore = 0;
 	activePlayer = 0;
 	gamePlaying = true;
+	prevDice = -1;
 
 	document.querySelector('.dice').style.display = 'none';
 	document.getElementById('score-0').textContent = 0;
@@ -89,8 +100,8 @@ function init() {
 	document.getElementById('current-0').textContent = 0;
 	document.getElementById('current-1').textContent = 0;
 
-	document.getElementById('#name-0').textContent = 'Player 1';
-	document.getElementById('#name-1').textContent = 'Player 2';
+	document.getElementById('name-0').textContent = 'Player 1';
+	document.getElementById('name-1').textContent = 'Player 2';
 
 	document.querySelector('.player-0-panel').classList.remove('winner');
 	document.querySelector('.player-1-panel').classList.remove('winner');
