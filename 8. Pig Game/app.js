@@ -9,7 +9,13 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, gamePlaying, prevDice;
+var scores,
+	roundScore,
+	activePlayer,
+	gamePlaying,
+	prevDice,
+	pointsToWin,
+	numValPointsToWin;
 
 init();
 
@@ -47,6 +53,15 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
 document.querySelector('.btn-hold').addEventListener('click', function () {
 	if (gamePlaying) {
+		// Challenge 2
+		pointsToWin = document.getElementById('points-needed');
+
+		if (pointsToWin.value) {
+			numValPointsToWin = pointsToWin.value;
+		} else {
+			numValPointsToWin = 100;
+		}
+
 		// 1. Add the current score to user's global score
 		scores[activePlayer] += roundScore;
 
@@ -55,7 +70,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 			scores[activePlayer];
 
 		// 3. Check if player won the game
-		if (scores[activePlayer] >= 100) {
+		if (scores[activePlayer] >= numValPointsToWin) {
 			document.querySelector('#name-' + activePlayer).textContent = 'Winner';
 			document.querySelector('.dice').style.display = 'none';
 			document
