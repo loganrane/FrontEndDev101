@@ -1,0 +1,152 @@
+// ---------------------
+// VARIABLES
+// ---------------------
+
+// Primary
+$color-red: hsl(0, 78%, 62%);
+$color-cyan: hsl(180, 62%, 55%);
+$color-orange: hsl(34, 97%, 64%);
+$color-blue: hsl(212, 86%, 64%);
+
+// Neutral
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0, 0%, 98%);
+
+// Fonts
+$default-font-size: 15px;
+$default-font-family: 'Poppins', sans-serif;
+
+// ---------------------
+// BASIC FOR THE WEBSITE
+// ---------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  font-family: 'Poppins', sans-serif;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+// ---------------------
+// HERO SECTION
+// ---------------------
+.hero {
+  height: 25vh;
+  margin: 4rem auto 3rem auto;
+  text-align: center;
+
+  &__heading {
+    font-size: 5.25rem;
+    color: $veryDarkBlue;
+
+    &--light {
+      font-weight: 200;
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__info {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 25vw;
+    font-weight: 200;
+    color: $veryDarkBlue;
+
+    @media only screen and (max-width: 600px) {
+      width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 100%;
+  }
+}
+
+// ---------------------
+// CARDS
+// ---------------------
+
+.cards {
+  display: grid;
+  grid-template-areas:
+    '. . tb tb . .'
+    'sv sv tb tb cl cl'
+    'sv sv km km cl cl'
+    '. . km km . .';
+  justify-content: center;
+
+  @media only screen and (max-width: 600px) {
+    grid-template-areas:
+      'tb'
+      'cl'
+      'km'
+      'sv';
+  }
+}
+
+.card {
+  display: inline-block;
+  margin: 1.75rem;
+  padding: 2rem;
+  width: 19vw;
+  height: 27vh;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: relative;
+
+  @media only screen and (max-width: 600px) {
+    height: 27rem;
+    width: 90%;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    color: $veryDarkBlue;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: $veryDarkBlue;
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+  }
+
+  &--1 {
+    border-top: 3px solid $color-red;
+    grid-area: tb;
+  }
+  &--2 {
+    border-top: 3px solid $color-blue;
+    grid-area: cl;
+  }
+  &--3 {
+    border-top: 3px solid $color-orange;
+    grid-area: km;
+  }
+  &--4 {
+    border-top: 3px solid $color-cyan;
+    grid-area: sv;
+  }
+}
