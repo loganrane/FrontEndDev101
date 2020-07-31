@@ -35,6 +35,12 @@ function handleSubmit(event) {
             document.getElementById(
                 "results"
             ).innerHTML = `The tone of the message is: ${data.polarity}`;
+            document.getElementById(
+                "text-doc"
+            ).innerHTML = `The text parsed from website is: ${data.text}`;
+            document.getElementById(
+                "subject"
+            ).innerHTML = `The subjectivity of text is: ${data.subjectivity}`;
         });
 
     return "API called";
